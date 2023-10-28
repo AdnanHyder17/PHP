@@ -1,0 +1,27 @@
+crud is create,Read,Update,Delete from Database
+Step1: Build Connection between php and database
+Step2: Run SQL Query
+Step3: Close connectio between php and database
+
+1)connection
+mysqli_connect(ServerName,UserName,Pass,DatabaseName)
+
+2) Run SQL Query
+mysqli_query(Connection Name, SQL Query)
+
+3)Close connection
+mysqli_close(connection close)
+
+Functions:
+    $sql = "Select * from employees";
+    $result = mysqli_query($conn, $sql)
+
+    mysqli_num_rows($result) returns number of fetched records
+
+    $res = mysqli_fetch_assoc($result);
+    print_r($res);      first row fetched will be displayed as assosiative array
+    $res = mysqli_fetch_assoc($result);
+    print_r($res);      second row fetched will be displayed as assosiative array
+    use loop to fetch all records one by one like while(mysqli_fetch_assoc($result)){}
+
+    
